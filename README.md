@@ -12,8 +12,8 @@ This is a reusable hook for the easy creation of selects, comboboxes, autocomple
 ### Installation
 
 ```
-npm install react-combo-box
-yarn add react-combo-box
+npm install react-combo-hook
+yarn add react-combo-hook
 ```
 
 ### Usage
