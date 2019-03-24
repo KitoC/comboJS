@@ -1,0 +1,27 @@
+{
+  "name": "react-combojs",
+  "version": "0.0.1",
+  "description": "A combobox/select hook for React.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KitoC/comboJS.git"
+  },
+  "keywords": [
+    "select",
+    "combobox",
+    "autocomplete"
+  ],
+  "author": "Kito Clark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KitoC/comboJS/issues"
+  },
+  "homepage": "https://github.com/KitoC/comboJS#readme",
+  "devDependencies": {
+    "react": "^16.8.5"
+  }
+}
