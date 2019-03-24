@@ -1,1 +1,1 @@
-module.exports = require(".src/useSelect.hook.js");
+module.exports = require("./src/useSelect.hook");

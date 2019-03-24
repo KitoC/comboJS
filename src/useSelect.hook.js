@@ -175,7 +175,10 @@ const useSelect = config => {
   });
 
   const selectInput = (inputConfig = {}) => {
-    const { customHandlers = () => ({}) } = inputConfig;
+    const { customHandlers = () => ({}), propOverrides = {} } = inputConfig;
+
+    // aria-autocomplete="list"
+    // aria-labelledby="downshift-6-label"
 
     return {
       props: {
@@ -183,7 +186,9 @@ const useSelect = config => {
         autoComplete: "off",
         role: "combobox",
         type: "text",
+        "aria-autocomplete": "list",
         "aria-expanded": { isOpen },
+        "aria-haspopup": true,
         "aria-labelledby": name,
         "aria-controls": `${name}-options`,
         id: name,
@@ -192,7 +197,8 @@ const useSelect = config => {
         ref: inputRef,
         onKeyDown,
         onFocus: onInputFocus,
-        ...customHandlers({})
+        ...customHandlers({}),
+        ...propOverrides
       }
     };
   };
@@ -240,6 +246,8 @@ const useSelect = config => {
     return {
       props: {
         "aria-expanded": isOpen,
+        "aria-labelledby": name,
+        role: "listbox",
         id: `${name}-options`,
         ref: optionMenuRef
       },
